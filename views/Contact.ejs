@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="lightblue">
+    <a href="/">Home</a>
+    <a href="/insert">Insert</a>
+    <a href="/display">Display</a>
+    <a href="/contact">Contact</a>
+    <div align="center">
+        <h1>This is Mern Full Stack Employees Contact Page</h1>
+     </div>
+
+    <table border="2px" align="center" bgcolor="pink">
+        <tr>
+            <th>Employee No.</th>
+            <th>Employee Name</th>
+            <th>Employee City</th>
+            <th>Employee Salary</th>
+               <th>Acthon</th>
+            
+        </tr>
+         <% 
+        data.forEach((key)=>{  %>
+    
+            <tr>
+                <td><%=key.empno%></td>
+                <td><%=key.name%></td>
+                <td><%=key.city%></td>
+                <td><%=key.Salary%></td>
+                <td>
+                    <a href="/recdel/?id=<%=key.id%>">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+    <%
+        })
+         %>
+       </table>
+    
+</body>
+</html>
